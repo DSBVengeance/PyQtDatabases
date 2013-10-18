@@ -63,6 +63,7 @@ Now that you have made a change to the code you need to **commit** that change t
 Having had a little taste of commiting changes can you answer the following question:
 
 1. Why is it important to commit your changes frequently?
+In case of loss of an important function.
 
 ##Building the application
 
