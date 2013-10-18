@@ -32,12 +32,26 @@ You will need to explore these files to answer the questions below.
 ###Code questions
 
 1. Why has the code for the **AddCustomerWidget** been separated into its own file?
+So it can be run separately from the main application
 2. How does the **AddCustomerWidget** communicate with the **ShopWindow** widget?
+With flags
 3. Why has the code for the **SQLConnection** object been separated into its own file?
+So the code can be reused in any place. And updates the entire program from just one program, rather than running through the whole thing changing each bit manually, which is a bit WET
 4. What does a QAction represent?
+Every button for a certain job is tied to a QAction, then the QAction runs the function.
 5. How could the code for the QActions be improved? You may need to refer to the [PyQt documentation][2]
+By adding the functions the QActions are trying to perform.
 6. Make one improvement to the code for a QAction
-
+        #set keyboard shortcuts
+        self.open_database.setShortcut(QKeySequence("Ctrl+O"))
+        self.close_database.setShortcut(QKeySequence("Ctrl+Q"))
+        self.add_customer.setShortcut(QKeySequence("Ctrl+A"))
+        self.browse_customers.setShortcut(QKeySequence("Ctrl+B"))
+        self.add_order.setShortcut(QKeySequence("Ctrl+Alt+A"))
+        self.browse_orders.setShortcut(QKeySequence("Ctrl+Alt+B"))
+        self.add_product.setShortcut(QKeySequence("Ctrl+Shift+A"))
+        self.browse_products.setShortcut(QKeySequence("Ctrl+Shift+B"))
+I made eight :D
 ##Committing changes
 
 Now that you have made a change to the code you need to **commit** that change to your local repository (your copy of the code).
